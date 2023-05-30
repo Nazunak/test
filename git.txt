@@ -6,3 +6,14 @@ git log
 git remote add origin https://github.com/Nazunak/test.git
 git branch -M main
 git push -u origin main
+git push
+
+
+cd .. - выйти из текущей папки
+cd test_coworking - войти в папку
+
+git clone
+https://github.com/Nazunak/test.git - ccылка на ветку
+test_work - название папки куда будет клонировать
+
+git putt - запулить с другого кампа
