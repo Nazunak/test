@@ -2,4 +2,7 @@ git init
 git status
 git add -A
 git commit -a -m"first commit"
-
+git log
+git remote add origin https://github.com/Nazunak/test.git
+git branch -M main
+git push -u origin main
