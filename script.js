@@ -19,10 +19,25 @@
 
 // console.log(personalMovieDB);
 
-let temperatyra = -3;
+// let temperatyra = -3;
 
-if (temperatyra > 0) {
-    console.log("teplo")
-} else {
-    console.log("cold")
-};
+// if (temperatyra > 0) {
+//     console.log("teplo")
+// } else {
+//     console.log("cold")
+// };
+
+let a = '';
+let lenght = 7;
+
+for (let i = 1; i < lenght; i++) {
+
+    for (let j = 0; j < i; j++) {
+        a += '*';
+    }
+    
+    a += '\n';
+}
+
+console.log(a);
+
