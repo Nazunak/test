@@ -124,45 +124,5 @@
 // } else {
 //     console.log('error');
 // }
-    
 
 
-// let numberF = +prompt('skolko posmorteli?');
-
-// let persMDB = {
-//     count: numberF,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
-// }
-
-// let firstLastF = prompt('odin iz poslednih filmov?');
-// let firstOcenka = +prompt('ocenite');
-// let secondLastF = prompt('odin iz poslednih filmov?');
-// let secondOcenka = +prompt('ocenite');
-
-// persMDB.movies[firstLastF] = firstOcenka;
-// persMDB.movies[secondLastF] = secondOcenka;
-
-// console.log(persMDB);
-
-for (let i = 5; i <= 10; i++) {
-    console.log(i);
-}
-
-for (let i = 20; i >= 10; i--) {
-    if (i === 13) break;
-    console.log(i);
-}
-
-for (let i = 2; i <= 10; i++) {
-    if (i % 2 === 0) {
-        console.log(i);
-    }
-}
-
-// let arr = [];
-// for (let i = 5; i <= 10; i++) {
-//     if (arr.)
-// }
