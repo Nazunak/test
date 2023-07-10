@@ -126,3 +126,70 @@
 // }
 
 
+// const usdCurr = 37;
+// const euCurr = 40;
+// const ruCurr = 2;
+
+// let kollichestvo = +prompt('skolko perevesti?', '');
+// let currency = prompt('choose currency', 'usd or eu');
+
+// function convert(kollichestvo, rate) {
+//     return rate * kollichestvo;
+// }
+
+// if (currency === 'usd') {
+//     let result = 'EUR=' + convert(kollichestvo, euCurr);
+//     result += 'RU=' + convert(kollichestvo, ruCurr);
+//     alert(kollichestvo + ' ' + currency + ' ' + result);
+// }
+
+// convert(kollichestvo, usdCurr);
+// convert(kollichestvo, euCurr);
+// convert(kollichestvo, ruCurr);
+
+// const usdCurr = 37;
+// const euCurr = 40;
+
+// let quantity = +prompt('Vvedit kilkist dlia perevody v gruvni', '')
+// let currency = prompt('Vvedit valuty', 'usd or eu');
+
+// function convert(quantity, currency) {
+//     return quantity * currency;
+// }
+
+// if (currency === 'usd') {
+//     let result = 'usd' + ': ' + convert(quantity, usdCurr);
+//     alert(result);
+// }
+
+// if (currency === 'eu') {
+//     let result = 'eu' + ': ' + convert(quantity, euCurr);
+//     alert(result);
+// }
+
+function sayHello(userName) {
+    return `Privet, ${userName}`;
+}
+
+sayHello('Petia');
+
+function returnNeighboringNumbers(number) {
+    return [number - 1, number, number + 1];
+}
+
+returnNeighboringNumbers(5);
+console.log(returnNeighboringNumbers(5));
+
+function getMathResult(firstNumber, secondNumber) {
+    return (firstNumber * 2);
+}
+
+
+
+getMathResult(3);
+console.log(getMathResult(3));
+
+
+
+
+

@@ -2,18 +2,34 @@ git init
 git status
 git add -A
 git commit -a -m"first commit"
-git log
-git remote add origin https://github.com/Nazunak/test.git
+
+git remote add origin https://github.com/Nazunak/test.git - після створення репо копіюю в ком.строку
 git branch -M main
 git push -u origin main
+
 git push
 
 
 cd .. - выйти из текущей папки
 cd test_coworking - войти в папку
 
-git clone
-https://github.com/Nazunak/test.git - ccылка на ветку
-test_work - название папки куда будет клонировать
 
-git putt - запулить с другого кампа
+git clone https://github.com/Nazunak/test.git test_work
+
+https://github.com/Nazunak/test.git test_work - копіюю з репо
+test_work - название папки куда будет клонировать (створює)
+
+git pull - запулить с другого кампа
+
+
+Щоб закинути на гітхаб.іо
+https://pages.github.com/
+Створюю паблік репо з назвою назва.гітхаб.іо
+Копіюю ссилку https://github.com/Nazunak/third.github.io.git з репо
+git clone https://github.com/Nazunak/third.github.io.git
+
+
+
+
+
+
