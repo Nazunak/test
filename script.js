@@ -167,29 +167,167 @@
 //     alert(result);
 // }
 
-function sayHello(userName) {
-    return `Privet, ${userName}`;
+// function sayHello(userName) {
+//     return `Privet, ${userName}`;
+// }
+
+// sayHello('Petia');
+
+// function returnNeighboringNumbers(number) {
+//     return [number - 1, number, number + 1];
+// }
+
+// returnNeighboringNumbers(5);
+// console.log(returnNeighboringNumbers(5));
+
+// function getMathResult(firstNumber, secondNumber) {
+//     return (firstNumber * 2);
+// }
+
+
+
+// getMathResult(3);
+// console.log(getMathResult(3));
+
+
+// let sliceWord = "lorem cringe";
+
+// console.log(sliceWord.length);
+// console.log(sliceWord.slice(0, 4));
+
+
+
+
+
+
+let numberOfFilms;
+
+function start() {
+    numberOfFilms = +prompt('skolko posmotreli filmov?', '');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+        numberOfFilms = +prompt('skolko posmotreli filmov?', '');
+    }
 }
 
-sayHello('Petia');
+// start();
 
-function returnNeighboringNumbers(number) {
-    return [number - 1, number, number + 1];
-}
-
-returnNeighboringNumbers(5);
-console.log(returnNeighboringNumbers(5));
-
-function getMathResult(firstNumber, secondNumber) {
-    return (firstNumber * 2);
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: true
 }
 
 
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        let a = prompt('odin iz poslednih filmov?', '');
+        let b = +prompt('na skolko ocenite ego?', '');
+    
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        } else {
+            console.log('error');
+            i--;
+        }   
+    }
+}
 
-getMathResult(3);
-console.log(getMathResult(3));
+// rememberMyFilms();
+
+function detectPersonalLevel(){
+    if (personalMovieDB.count < 10) {
+        console.log('malo');
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log('klassic');
+    } else if (personalMovieDB.count >= 30) {
+        console.log('kinoman');
+    } else {
+        console.log('error');
+    }
+}
+
+// detectPersonalLevel();
+
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+
+// showMyDB(personalMovieDB.privat);
+
+
+let uGenres;
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        uGenres = prompt(`ваш любимий жанр под номером ${i}`);
+        personalMovieDB.genres[i - 1] = uGenres;
+    }
+    console.log(personalMovieDB);
+}
+
+// writeYourGenres();
+
+
+
+let volume;
+let area;
+
+function calculateVolumeAndArea(lenght) {
+    if (typeof(lenght) !== 'number' || lenght < 0 || !Number.isInteger(lenght)) {
+        return 'error'
+    }
+    let volume = lenght * lenght * lenght;
+    let area = 6 * (lenght * lenght);
+    return `obem: ${volume}, plo: ${area}`;
+}
+
+// console.log(calculateVolumeAndArea(2));
 
 
 
 
+function getCoupeNumber(numberCupe) {
+    if (typeof(numberCupe) == 0 || numberCupe > 36) {
+        return 'nety takih mest';
+    }
 
+    if (typeof(numberCupe) !== 'number' || numberCupe < 0 || !Number.isInteger(numberCupe)) {
+        return 'error, proverte mesto';
+    }
+    return Math.ceil(numberCupe / 4);
+
+}
+
+// console.log(getCoupeNumber(1));
+
+
+
+function getCoupeNumber(seatNumber) {
+    if (typeof (seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+        return "Ошибка. Проверьте правильность введенного номера места";
+    }
+
+    if (seatNumber === 0 || seatNumber > 36) {
+        return "Таких мест в вагоне не существует";
+    }
+
+    return Math.ceil(seatNumber / 4);
+    // тут очень много вариантов решения, но выбрал один из элегантных :)
+}
+
+// console.log(getCoupeNumber(1));
+
+const oneHour = 60;
+let minute;
+
+function getTimeFromMinutes(time) {
+
+}
+
+console.log(getTimeFromMinutes(80));
