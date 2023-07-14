@@ -360,3 +360,15 @@ function getTimeFromMinutes(time) {
 }
 
 // console.log(getTimeFromMinutes(180));
+
+
+function findMaxNumber(a, b, c, d) {
+    if (typeof(a) !== 'number' || typeof(b) !== 'number' || typeof(c) !== 'number' || typeof(d) !== 'number') {
+        return 0;
+    }
+
+    let maxNum = Math.max(a, b, c, d);
+    return maxNum;
+}
+
+console.log(findMaxNumber(1, '2', 3, 4));
