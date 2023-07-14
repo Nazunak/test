@@ -323,11 +323,40 @@ function getCoupeNumber(seatNumber) {
 
 // console.log(getCoupeNumber(1));
 
-const oneHour = 60;
-let minute;
+
 
 function getTimeFromMinutes(time) {
+    if (typeof(time) !== 'number' || time < 0 || !Number.isInteger(time)) {
+        return "Ошибка, проверьте данные"
+    }
+
+    let hour = Math.floor(time / 60);
+    let minutes = time % 60;
+    let timeStr = '';
+
+    switch (hour) {
+        case 0:
+            timeStr = 'годин';
+            break;
+        case 1:
+            timeStr = 'година';
+            break;
+        case 2:
+            timeStr = 'години';
+            break;
+        case 3:
+            timeStr = 'години';
+            break;
+        case 4:
+            timeStr = 'години';
+            break;
+        case 5:
+            timeStr = 'годин';
+            break;
+    }
+
+    return `Це ${hour} ${timeStr} і ${minutes} хвилин`;
 
 }
 
-console.log(getTimeFromMinutes(80));
+// console.log(getTimeFromMinutes(180));
