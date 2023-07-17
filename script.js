@@ -220,6 +220,8 @@ let personalMovieDB = {
     privat: true
 }
 
+// console.log(Object.keys(personalMovieDB).length);
+
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
@@ -371,4 +373,43 @@ function findMaxNumber(a, b, c, d) {
     return maxNum;
 }
 
-console.log(findMaxNumber(1, '2', 3, 4));
+// console.log(findMaxNumber(1, '2', 3, 4));
+
+function fib() {
+
+}
+
+// fib();
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%'
+        },
+        exp: '1 month'
+    }
+};
+
+function showExperience(plan) {
+    let {exp} = plan.skills;
+    return exp;
+}
+
+// console.log(showExperience(personalPlanPeter));
+
+
+function showProgrammingLangs(plan) {
+    let str = '';
+    const {programmingLangs} = plan.skills;
+    for (let key in programmingLangs) {
+        str += `sdf ${key} bpdexy yf ${programmingLangs[key]}\n`
+    }
+    return str;
+}
+
+// console.log(showProgrammingLangs(personalPlanPeter));
+
