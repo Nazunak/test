@@ -391,11 +391,21 @@ const personalPlanPeter = {
             php: '10%'
         },
         exp: '1 month'
+    },
+    showAgeAndLangs: function(plan) {
+        const {age} = plan;
+        let str = '';
+        const {languages} = plan.skills;
+        str = `vyt ${age} sdgsdf ${languages}`
+        return str;
     }
 };
 
+console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+
+
 function showExperience(plan) {
-    let {exp} = plan.skills;
+    const {exp} = plan.skills;
     return exp;
 }
 
@@ -406,10 +416,42 @@ function showProgrammingLangs(plan) {
     let str = '';
     const {programmingLangs} = plan.skills;
     for (let key in programmingLangs) {
-        str += `sdf ${key} bpdexy yf ${programmingLangs[key]}\n`
+        str += `sdfsdf ${key} sdfsdf ${programmingLangs[key]}\n`
     }
     return str;
 }
 
 // console.log(showProgrammingLangs(personalPlanPeter));
+
+function isCoworkingMorning() {
+    // Визначаємо час початку та закінчення ранку в коворкінгу
+    const coworkingMorningStart = new Date();
+    coworkingMorningStart.setHours(9, 0, 0, 0); // Припустимо, що ранок в коворкінгу починається о 9:00 ранку
+    const coworkingMorningEnd = new Date();
+    coworkingMorningEnd.setHours(11, 0, 0, 0); // Припустимо, що ранок в коворкінгу триває до 11:00
+
+    // Отримуємо поточний час
+    const now = new Date();
+
+    // Перевіряємо, чи час знаходиться між початком та закінченням ранку в коворкінгу
+    return now >= coworkingMorningStart && now <= coworkingMorningEnd;
+}
+
+function greetInCoworking() {
+    if (isCoworkingMorning()) {
+        return('Гарного дня у коворкінгу! Бажаю вам продуктивного ранку!');
+    } else {
+        return('Гарного дня!');
+    }
+}
+
+// Викликаємо функцію greetInCoworking() при завантаженні сторінки
+console.log(greetInCoworking());
+
+
+const arr = [2, 6, 5, 4, 10];
+
+arr.forEach(function(item, i, arr) {
+    console.log(`порядковий номер ${i}: ${item} масива ${arr}`);
+});
 
